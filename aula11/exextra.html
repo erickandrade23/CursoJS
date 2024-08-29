@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De onde voce é?</title>
+</head>
+<body>
+    <h1>De onde voce é?</h1>
+    Qual pais? <input type="text" name="txtvel" id="txtvel"> 
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var txtv = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = String(txtv.value)
+            res.innerHTML = `<p>Você é do país <strong>${vel}</strong><p>`
+            //res.innerHTML = `<p></p>`
+            if (vel> 'Brasil') {
+                res.innerHTML += `<p>Você Não é brasileiro!</p>`
+                res.innerHTML += `Más ainda sim gostamos de você!:)`
+            }
+            res.innerHTML += `<p>Tenha um ótimo dia!</p>`
+        }   
+        
+    </script>
+</body>
+</html> 
